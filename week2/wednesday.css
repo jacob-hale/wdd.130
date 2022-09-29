@@ -1,0 +1,16 @@
+h1 {
+  color: red;
+}
+
+.fancyHeader {
+  background-color: #46a2ffcc;
+  font-size: 69px;
+  text-align: center;
+}
+.Sweetdiv {
+  color: blue;
+}
+
+button {
+  margin-top: 10px;
+}
