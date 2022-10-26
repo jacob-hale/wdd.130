@@ -1,0 +1,28 @@
+.text {
+    font-size: 100px
+    
+}
+
+.cherries {
+    color: red;
+}
+
+.pic {
+    max-width: 50%; 
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.grid-item1 {
+    grid-area: header;
+}
+
+.grid-item2{
+    grid-area: main;
+}
+
+.grid-item3{
+    grid-area: right;
+}
