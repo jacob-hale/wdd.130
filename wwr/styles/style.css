@@ -87,6 +87,8 @@ nav a:hover{
     background-color: #f4d149;
     line-height: 1.5em;
     padding: 35px;
+    grid-column: 6/10;
+    grid-row: 5/6;
 }
 
 footer{
@@ -126,10 +128,7 @@ h4{
     font-size: .8em;
     padding-bottom: 15px;
 }
-.msg {
-    grid-column: 6/10;
-    grid-row: 6/7;
-}
+
 .icon {
     width: 80px;
     padding-top: 10px;
@@ -170,6 +169,7 @@ footer .social img{
     grid-column: 2/7;
     grid-row: 5/8;
     box-shadow: 5px 5px 10px #6f7364;
+    margin-top: -200px;
 }
 .rivers-card{
     grid-column: 2/4;
