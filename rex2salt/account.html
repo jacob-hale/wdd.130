@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rex2Salt | Account Setup</title>
+    <link rel="stlyesheet" href="./styles/styles.css">
+</head>
+<body>
+    <div id="content">
+    <header>
+        <a id="logo_link" href="index.html">
+            <img class="logo" src="./styles/images/rex2salt.png" alt="Rex2Salt Logo"/>
+        </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="./account.html">Account Setup</a>
+            <a href="./faqs.html">FAQs</a>
+        </nav>
+    </header>
+    <div id="hero">
+        <div id="hero-box">
+            <img id="hero-img" src="./styles/images/roadtrip.jpg" alt="Road Trip"/>
+        </div>
+        <section id="hero-msg">
+            <h1 class="home-title">Account Setup</h1>
+        </section>
+    </div>
+    <main>
+    <div id="start">
+            <h4 id="start-title">Where can I start?</h4>
+            <p>They will want to sign up as either a driver or rider. 
+                Maybe both. They will create a profile that other users
+                would be able to see. They will then want to plan a trip 
+                and find a rider or driver for their trip. After a trip,
+                they will leave a review behind on either the rider or 
+                driver (providing a good experience will build that person’s 
+                profile and reputation making it easier and more likely to get 
+                the ride they want in the future). Pay or get paid.</p>
+        </div>
+        <div id="setup"></div>
+        <form action="/my-handling-form-page" method="post">
+            <ul>
+              <li>
+                <label for="fname">First Name:</label>
+                <input type="text" id="name" name="user_fname" />
+              </li>
+              <li>
+                <label for="lname">Last Name:</label>
+                <input type="text" id="name" name="user_lname" />
+              </li>
+              <li>
+                <label for="mail">E-mail:</label>
+                <input type="email" id="mail" name="user_email" />
+              </li>
+              <li>
+                <label for="phone">Phone Number:</label>
+                <input type="number" id="phone" name="user_phone" />
+              </li>
+              <li>
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="user_address" />
+              </li>
+              <li>
+                What kind of account do you want to set up? <br>
+                <label for="rider">Rider</label>
+                <input type="radio" id="type" name="rider"/><br>
+                <label for="driver">Driver</label>
+                <input type="radio" id="type" name="driver"/>
+              </li>
+              
+            </ul>
+            <li class="button">
+                <button type="submit">Send your message</button>
+            </li>
+          </form>
+          <img id="driver-img" src="./styles/images/driver.jpg" alt="Driver">
+    </main>
+    
+    </div>
+    <footer>
+        <p>Rex2Salt &copy; 2022 - Jacob Hale</p>
+        <p><a href="index.html">Home</a></p>
+        <p> <a href="./account.html">Account Setup</a></p>
+        <p> <a href="./faqs.html">FAQs</a></p>
+        <p> <a href="./site-plan.html">Site Plan</a> </p>
+        <p> <div class="social">
+            <a href="https://facebook.com" target="_blank">
+                <img src="../wwr/images/facebook.png" alt="fb icon">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="../wwr/images/twitter.png" alt="twitter icon">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="../wwr/images/instagram.png" alt="instagram icon">
+            </a>
+        </div>
+    </footer>
+    <script>
+        // get the feedback div element so we can do something with it.
+        const feedbackElement = document.getElementById('feedback');
+        // get the form so we can read what was entered in it.
+        const formElement = document.forms[0];
+        // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+        formElement.addEventListener('submit', function(e) {
+            // stop the form from doing the default action.
+            e.preventDefault();
+            // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+            feedbackElement.innerHTML = 'Hello '+ formElement.user_fname.value +'! Thank you for creating a Rex2Salt account. Safe travels!';
+            // make the feedback element visible.
+            feedbackElement.style.display = "block";
+            // add a class to move everything down so our message doesn't cover it.
+            document.body.classList.toggle('moveDown');
+        });
+    </script>
+</body>
+</html>
