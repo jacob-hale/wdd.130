@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rex2Salt | Account Setup</title>
-    <link rel="stlyesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
     <div id="content">
@@ -27,10 +27,10 @@
             <h1 class="home-title">Account Setup</h1>
         </section>
     </div>
-    <main>
+    <main class="account-grid">
     <div id="start">
             <h4 id="start-title">Where can I start?</h4>
-            <p>They will want to sign up as either a driver or rider. 
+            <p id="start-content">They will want to sign up as either a driver or rider. 
                 Maybe both. They will create a profile that other users
                 would be able to see. They will then want to plan a trip 
                 and find a rider or driver for their trip. After a trip,
@@ -39,16 +39,16 @@
                 profile and reputation making it easier and more likely to get 
                 the ride they want in the future). Pay or get paid.</p>
         </div>
-        <div id="setup"></div>
-        <form action="/my-handling-form-page" method="post">
+        <div id="setup">
+        <form action="/my-handling-form-page" method="post" id="account-form">
             <ul>
               <li>
                 <label for="fname">First Name:</label>
-                <input type="text" id="name" name="user_fname" />
+                <input type="text" id="fname" name="user_fname" />
               </li>
               <li>
                 <label for="lname">Last Name:</label>
-                <input type="text" id="name" name="user_lname" />
+                <input type="text" id="lname" name="user_lname" />
               </li>
               <li>
                 <label for="mail">E-mail:</label>
@@ -72,11 +72,14 @@
               
             </ul>
             <li class="button">
-                <button type="submit">Send your message</button>
+                <button type="submit" onclick="display()">Create Account</button>
             </li>
           </form>
-          <img id="driver-img" src="./styles/images/driver.jpg" alt="Driver">
-    </main>
+        
+          
+        </div>
+        <img id="driver-img" src="./styles/images/driver.jpg" alt="Driver">
+        </main>
     
     </div>
     <footer>
@@ -99,7 +102,7 @@
     </footer>
     <script>
         // get the feedback div element so we can do something with it.
-        const feedbackElement = document.getElementById('feedback');
+        const feedbackElement = document.getElementById('setup');
         // get the form so we can read what was entered in it.
         const formElement = document.forms[0];
         // add a 'listener' to wait for a submission of our form. When that happens run the code below.
@@ -113,6 +116,7 @@
             // add a class to move everything down so our message doesn't cover it.
             document.body.classList.toggle('moveDown');
         });
+        
     </script>
 </body>
 </html>
